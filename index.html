@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -13,209 +16,371 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body class=" bg-white border-4 border-red-700">
-    <header>
-       <nav>
-        <div class="navbar bg-white">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16" />
-                  </svg>
-                </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                  <li><a>Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>Destination</a></li>
-                  <li><a>Search</a></li>
-                </ul>
-              </div>
-              <a class="btn-ghost text-4xl font-extrabold text-[#030712]">G-Ticket</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a>Home</a></li>
-                <li><a>About</a></li>
-                <li><a>Destination</a></li>
-                <li><a>Search</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end">
-                <button class="btn bg-[#1cd1001a] border-green-500">
-                    <h1 class="text-[#1DD100]">Buss</h1><img src="images/bus-icon.png" alt="">
-                </button>
-            </div>
-          </div>
-       </nav>
-    </header>
-    
-    <!-- main section -->
-     <main>
-      <!-- banner section -->
- <section>
-  <section class="flex flex-col justify-center lg:relative">
-    <div class="mx-auto">
-      <div class="lg:relative">
-          <img src="images/banner.png" alt="">
-      </div>
-      <div class="text-center flex flex-col justify-center items-center lg:absolute top-24 left-0 right-0 mx-auto">
-          <h1 class="text-[64px] raleway font-extrabold ">End-to-End Travel with <br>
-               <span class="text-[#1DD100]">
-                  G Paribahan
-               </span>
-              </h1>
-              <p class="w-96">
-                Relaxing Journey Bus Services is more than just a means of transportation; it's an experience designed to rejuvenate and delight. Choose us for your next trip and discover the joy of traveling in true comfort.
-              </p>
-              <button class="bg-[#1DD100] text-[#030712] font-bold border-none p-5 rounded-xl">Buy Ticket</button>
-      </div>     
-   </div>
-  </section>
-   <div class="flex flex-col gap-6 justify-center items-center mt-4 lg:flex-row lg:absolute bottom-6 left-0 right-0 mx-auto ">
-    <div class="bg-white text-center flex gap-2 rounded-lg border-b-[#1DD100] border-4">
-      <div >
-        <img src="images/people.png" alt="">
-      </div>
-      <div>
-        <h1 class="text-[#030712] text-4xl">
-          500K+
-        </h1>
-        <p>
-          Registered users
-        </p>
-      </div>
-    </div>
-    <div class="bg-white text-center flex gap-2 rounded-lg border-b-[#1DD100] border-4">
-      <div >
-        <img src="images/ticket-cupon.png" alt="">
-      </div>
-      <div>
-        <h1 class="text-[#030712] text-4xl">
-          1.7 lacks
-        </h1>
-        <p>
-          Tickets sold
-        </p>
-      </div>
-    </div>
-    <div class="bg-white text-center flex gap-2 rounded-lg border-b-[#1DD100] border-4">
-      <div >
-        <img src="images/stoppage.png" alt="">
-      </div>
-      <div>
-        <h1 class="text-[#030712] text-4xl">
-          800K+
-        </h1>
-        <p>
-          Rental partners
-        </p>
-      </div>
-    </div>
-  </div>
- </section>
- <!-- offer section -->
- <section class=" text-center mt-24">
-  <h1 class=" text-[rgb(3,7,18)] font-extrabold text-4xl mb-4 ">Best Offers For You</h1>
-  <div class="flex flex-col lg:flex-row items-center justify-center gap-5">
-    <div class="bg-[#FFBF0F] flex text-center items-center rounded-xl">
-      <div class="p-9">
-      <h1 class="text-[#030712] font-extrabold text-4xl raleway ">15% OFF</h1>
-      <P class="text-gray-900">on your next purchase</P>
-      <P class="text-gray-600">January 2024</P>
-      </div>
-      <div>
-        <img src="images/cupon-devider.png" alt="">
-      </div>
-      <div class="p-9">
-        <h1 class="text-[#030712] text-4xl font-extrabold raleway ">New 15</h1>
-        <P class="text-gray-900">coupon code</P>
-      </div>
-    </div>
-    <div class="bg-[#F78C9C] flex text-center items-center rounded-xl">
-      <div class="p-9">
-        <h1 class="text-[#030712] font-extrabold text-4xl raleway ">20% OFF</h1>
-      <P class="text-gray-900">on your next purchase</P>
-      <P class="text-gray-600">January 2024</P>
-      </div>
-      <div>
-        <img src="images/cupon-devider.png" alt="">
-      </div>
-      <div class="p-9">
-        <h1 class="text-[#030712] text-4xl font-extrabold raleway "> Couple 20</h1>
-        <P class="text-gray-900">coupon code</P>
-      </div>
-    </div>
-  </div>
-  <button class="text-green-600 border-4 border-green-300 rounded-lg bg-slate-100 p-4 mt-7"> See All Offer</button>
-</section>
-<!-- set section -->
- <section class="mt-7 bg-[#F7F8F8] border-2 border-green-400 rounded-tl-[88px] rounded-tr-[88px]">
-  <div class="text-center flex flex-col items-center">
-    <h1 class="text-5xl text-[#030712] raleway font-extrabold"> G Paribahan</h1>
-    <p class="w-96">
-      Relaxing Journey Bus Services is more than just a means of transportation; it's an experience designed to rejuvenate and delight. Choose us for your next trip and discover the joy of traveling in true comfort.
-    </p>
-  </div>
-  <!-- distention section  -->
-   <section class="flex flex-col container mx-auto rounded-3xl justify-around items-center bg-white lg:flex-row my-4">
-<div class="flex flex-col gap-6 ">
-    <!-- count section -->
-    <div class="flex flex-col gap-3 pt-4 justify-center lg:flex-row justify-between ">
-      <div class="flex rounded-xl">
-        <img src="images/bus-logo.png" alt="">
-       <div>
-        <h1 class="text-4xl raleway font-bold text-[#030712]">Green Ever poribahan</h1>
-        <p>Coach-009-WEB ! AC_Business</p>
+<body class="raleway">
+  <!-- header section -->
+  <header>
+    <nav>
+     <div class="navbar bg-white">
+         <div class="navbar-start">
+           <div class="dropdown">
+             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+               <svg
+                 xmlns="http://www.w3.org/2000/svg"
+                 class="h-5 w-5"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+                 <path
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   stroke-width="2"
+                   d="M4 6h16M4 12h8m-8 6h16" />
+               </svg>
+             </div>
+             <ul
+               tabindex="0"
+               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+               <li><a>Home</a></li>
+               <li><a>About</a></li>
+               <li><a>Destination</a></li>
+               <li><a>Search</a></li>
+             </ul>
+           </div>
+           <a class="btn-ghost text-4xl font-extrabold text-[#030712]">G-Ticket</a>
+         </div>
+         <div class="navbar-center hidden lg:flex">
+           <ul class="menu menu-horizontal px-1">
+             <li><a>Home</a></li>
+             <li><a>About</a></li>
+             <li><a>Destination</a></li>
+             <li><a>Search</a></li>
+           </ul>
+         </div>
+         <div class="navbar-end">
+             <button class="btn bg-[#1cd1001a] border-green-500">
+                 <h1 class="text-[#1DD100]">Buss</h1><img src="images/bus-icon.png" alt="">
+             </button>
+         </div>
        </div>
+    </nav>
+ </header>
+<main>
+  <!-- banner section -->
+  <section>
+    <div class="flex flex-col justify-center lg:relative">
+      <div class="mx-auto">
+        <div class="lg:relative">
+            <img src="images/banner.png" alt="">
+        </div>
+        <div class="text-center flex flex-col justify-center items-center lg:absolute top-24 left-0 right-0 mx-auto">
+            <h1 class="text-[64px] raleway font-extrabold ">End-to-End Travel with <br>
+                 <span class="text-[#1DD100]">
+                    G Paribahan
+                 </span>
+                </h1>
+                <p class="w-96">
+                  Relaxing Journey Bus Services is more than just a means of transportation; it's an experience designed to rejuvenate and delight. Choose us for your next trip and discover the joy of traveling in true comfort.
+                </p>
+                <button class="bg-[#1DD100] text-[#030712] font-bold border-none p-5 rounded-xl">Buy Ticket</button>
+        </div>     
+     </div>
+    </div>
+    <!-- review -->
+     <div class="flex flex-col gap-6 justify-center items-center mt-4 lg:flex-row lg:absolute bottom-6 left-0 right-0 mx-auto ">
+      <div class="bg-white text-center flex gap-2 rounded-lg border-b-[#1DD100] border-4">
+        <div >
+          <img src="images/people.png" alt="">
+        </div>
+        <div>
+          <h1 class="text-[#030712] text-4xl">
+            500K+
+          </h1>
+          <p>
+            Registered users
+          </p>
+        </div>
       </div>
-      <div class="flex items-center pl-4 pr-4 text-green-600 gap-2 bg-[#1dd10026] rounded-xl">
-        <img src="images/seat-gray.png" alt="">
-        <h1><span>40</span> Seats left</h1>
+      <div class="bg-white text-center flex gap-2 rounded-lg border-b-[#1DD100] border-4">
+        <div >
+          <img src="images/ticket-cupon.png" alt="">
+        </div>
+        <div>
+          <h1 class="text-[#030712] text-4xl">
+            1.7 lacks
+          </h1>
+          <p>
+            Tickets sold
+          </p>
+        </div>
+      </div>
+      <div class="bg-white text-center flex gap-2 rounded-lg border-b-[#1DD100] border-4">
+        <div >
+          <img src="images/stoppage.png" alt="">
+        </div>
+        <div>
+          <h1 class="text-[#030712] text-4xl">
+            800K+
+          </h1>
+          <p>
+            Rental partners
+          </p>
+        </div>
       </div>
     </div>
-
-<div class="border-2 border-green-400 rounded-xl flex flex-col gap-3"> 
-  <div class=" flex justify-between rute">
-    <h1>Route</h1>
-    <h1>Dhaka-Style</h1>
-    </div>
-    <hr class="divide-dotted">
-   <div class=" flex justify-between rute">
-   <h1>Departure Time</h1>
-   <h1>9.00 pm</h1>
-   </div>
-   <hr class="divide-dotted divide-x-2">
-   <div class="flex items-center justify-center gap-5">
-     <button class="px-2 py-3 text-center bg-[#03071226] text-[#030712] rounded-xl">Boarding Point - Laxmipur</button>
-     <button class="px-2 py-3 text-center bg-[#03071226] text-[#030712] rounded-xl">Boarding Point - Laxmipur</button>
-     <button class="px-2 py-3 text-center bg-[#03071226] text-[#030712] rounded-xl">Boarding Point - Laxmipur</button> 
-   </div>
-</div>
-</div>
-<!-- info divider -->
-<img class="hidden lg:block" src="images/info-devider.png"
- alt="">
-<div class=" flex flex-col gap-3 items-center justify-center">
-  <img src="images/fare.png" alt="">
-  <h1 class="raleway text-[#030712]">500 Taka</h1>
-  <h1>per seat</h1>
-</div>
    </section>
- </section>
-     </main>
-     <script src="index.js"></script>
-     <script src="tailwind.config.js"></script>
+
+     <!-- offer section -->
+     <section class=" text-center mt-24 container mx-auto">
+      <h1 class=" text-[rgb(3,7,18)] font-extrabold text-4xl mb-4 ">Best Offers For You</h1>
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-5">
+        <div class="bg-[#FFBF0F] flex text-center items-center rounded-xl">
+          <div class="p-9">
+          <h1 class="text-[#030712] font-extrabold text-4xl raleway ">15% OFF</h1>
+          <P class="text-gray-900">on your next purchase</P>
+          <P class="text-gray-600">January 2024</P>
+          </div>
+          <div>
+            <img src="images/cupon-devider.png" alt="">
+          </div>
+          <div class="p-9">
+            <h1 class="text-[#030712] text-4xl font-extrabold raleway ">New 15</h1>
+            <P class="text-gray-900">coupon code</P>
+          </div>
+        </div>
+        <div class="bg-[#F78C9C] flex text-center items-center rounded-xl">
+          <div class="p-9">
+            <h1 class="text-[#030712] font-extrabold text-4xl raleway ">20% OFF</h1>
+          <P class="text-gray-900">on your next purchase</P>
+          <P class="text-gray-600">January 2024</P>
+          </div>
+          <div>
+            <img src="images/cupon-devider.png" alt="">
+          </div>
+          <div class="p-9">
+            <h1 class="text-[#030712] text-4xl font-extrabold raleway "> Couple 20</h1>
+            <P class="text-gray-900">coupon code</P>
+          </div>
+        </div>
+      </div>
+      <button class="text-green-600 border-4 border-green-300 rounded-lg bg-slate-100 p-4 mt-7"> See All Offer</button>
+    </section>
+
+    <!-- seat select section -->
+    <section class="mt-12 bg-[#F7F8F8] ">
+      <!-- seat header -->
+       <div class="container mx-auto ">
+        <div class="text-center flex flex-col items-center pt-28">
+          <h1 class="text-5xl text-[#030712] raleway font-extrabold"> G Paribahan</h1>
+          <p class="w-96">
+            Relaxing Journey Bus Services is more than just a means of transportation; it's an experience designed to rejuvenate and delight. Choose us for your next trip and discover the joy of traveling in true comfort.
+          </p>
+        </div>
+         <!-- distention part -->
+        <div class="flex flex-col rounded-3xl justify-around items-center bg-white lg:flex-row my-4">
+          <div class="flex flex-col gap-6 ">
+              <!-- count part -->
+              <div class="flex flex-col gap-3 pt-4 justify-center lg:flex-row justify-between ">
+                <div class="flex rounded-xl">
+                  <img src="images/bus-logo.png" alt="">
+                 <div>
+                  <h1 class="text-4xl raleway font-bold text-[#030712]">Green Ever poribahan</h1>
+                  <p>Coach-009-WEB ! AC_Business</p>
+                 </div>
+                </div>
+                <div class="flex items-center pl-4 pr-4 text-green-600 gap-2 bg-[#1dd10026] rounded-xl">
+                  <img src="images/seat-gray.png" alt="">
+                  <h1><span>40</span> Seats left</h1>
+                </div>
+              </div>
+          
+          <div class="border-2 p-5 border-green-400 rounded-xl flex flex-col gap-3"> 
+            <div class=" flex justify-between">
+              <h1>Route</h1>
+              <h1>Dhaka-Style</h1>
+              </div>
+              <hr class="divide-dotted">
+             <div class=" flex justify-between rute">
+             <h1>Departure Time</h1>
+             <h1>9.00 pm</h1>
+             </div>
+             <hr class="divide-dotted divide-x-2">
+             <div class="flex items-center justify-center gap-5">
+               <button class="px-2 py-3 text-center bg-[#03071226] text-[#030712] rounded-xl">Boarding Point - Laxmipur</button>
+               <button class="px-2 py-3 text-center bg-[#03071226] text-[#030712] rounded-xl">Boarding Point - Laxmipur</button>
+               <button class="px-2 py-3 text-center bg-[#03071226] text-[#030712] rounded-xl">Boarding Point - Laxmipur</button> 
+             </div>
+          </div>
+          </div>
+          <!-- info divider -->
+          <img class="hidden lg:block" src="images/info-devider.png"
+           alt="">
+          <div class=" flex flex-col gap-3 items-center justify-center">
+            <img src="images/fare.png" alt="">
+            <h1 class="raleway text-[#030712]">500 Taka</h1>
+            <h1>per seat</h1>
+          </div>
+        </div>
+        <!-- seat list and info -->
+         <div class="flex flex-col mt-28 divide-x divide-dashed divide-black lg:flex-row justify-between inter">
+          <!-- seat list -->
+          <div class="flex flex-col gap-5 flex-1 p-4 bg-white lg:rounded-tl-3xl rounded-bl-3xl">
+            <div>
+                <div class="flex flex-col gap-3">
+                   <h1 class="text-[#030712] ">Select Your Seat</h1>
+                   <hr class="divide-dotted">
+                   <div class="flex justify-between">
+                    <h1 class="inline-flex gap-2"><img src="images/seat-gray.png" alt="">Available </h1>
+                    <h1 class="inline-flex gap-2 text-green-300"><img src="images/seat-green-filled.png" alt="">selected seat </h1>
+                   </div>
+                   <hr class="divide-dotted">
+                </div>
+            </div>
+            <div class="flex-1  grid grid-cols-5 gap-2 items-center p-4">
+                <!-- Driver's seat -->
+                <div></div> <!-- Empty cell for alignment -->
+               <div></div>
+                <div></div> <!-- Empty cell for spacing -->
+                <div></div>
+                <div class="w-12 h-12 bg-gray-200 flex items-center justify-center rounded-full">
+                    <img src="tabler-icon-steering-wheel.png" alt="Driver Seat" class="w-6 h-6">
+                  </div>
+              
+                <!-- Row A -->
+                <div class="font-bold text-center">A</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A1</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A2</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A3</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A4</div>
+              
+                <!-- Row B -->
+                <div class="font-bold text-center">B</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B1</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B2</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B3</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B4</div>
+              
+                <!-- Row C -->
+                <div class="font-bold text-center">C</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C1</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C2</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C3</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C4</div>
+              
+                <!-- Row D -->
+                <div class="font-bold text-center">D</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D1</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D2</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D3</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D4</div>
+              
+                <!-- Row E -->
+                <div class="font-bold text-center">E</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E1</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E2</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E3</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E4</div>
+              
+                <!-- Row F -->
+                <div class="font-bold text-center">F</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F1</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F2</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F3</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F4</div>
+                <!-- Row G -->
+                <div class="font-bold text-center">G</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G1</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G2</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G3</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G4</div>
+                <!-- Row H -->
+                <div class="font-bold text-center">H</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H1</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H2</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H3</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H4</div>
+                <!-- Row I -->
+                <div class="font-bold text-center">I</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I1</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I2</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I3</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I4</div>
+                <!-- Row J -->
+                <div class="font-bold text-center">J</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J1</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J2</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J3</div>
+                <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J4</div>
+              </div>
+           </div>
+           <!-- seat booking info -->
+           <div class="flex-1 bg-white p-4 lg:rounded-tr-3xl rounded-br-3xl ">
+            <div>
+                <h1 class="text-[#030712] mb-3 ">Select Your Seat</h1>
+                <hr class="divide-emerald-400 divide-dashed">
+            </div>
+          <div class="gap-4 bg-[#F7F8F8] p-5 rounded-2xl mt-7">
+             
+              <div class="flex justify-between gap-7">
+                  <h1 class="inline-flex items-center gap-2 text-[#030712]">seat <span class="w-7 h-5 bg-green-300 text-center rounded-xl">0</span></h1>
+                  <h1 class="text-[#030712] ">class</h1>
+                  <h1 class="text-[#030712] ">price</h1>
+              </div>
+              <hr class="divide-dotted">
+              <!-- input child price,class  -->
+              <div class="flex justify-between">
+                  
+              </div>
+              <hr class="divide-dotted">
+              <!-- total price  -->
+              <div class="flex justify-between">
+                  <h1 class="text-[#030712] "> Total</h1>
+                  <h1 class="text-[#030712] ">BDT <span class="total-price">0</span></h1>
+              </div>
+              <div>
+                  <h1 class="inline-flex rounded-lg p-5 border-green-400 bg-white"><input type="text" placeholder="Have any copnu?" class="bg-white">
+                  <button class="bg-green-400 text-white text-center rounded-xl p-2">Apply</button></h1>
+                  
+              </div>
+              <!-- grand total -->
+              <div class="flex justify-between">
+                  <h1 class="text-[#030712] "> Grand Total</h1>
+                  <h1 class="text-[#030712] ">BDT <span class="grand-total">0</span></h1>
+              </div>
+          </div>
+             <!-- div 2.1 -->
+         <div class="flex flex-col gap-3 ">
+         <div>
+            <label class="form-control w-full">
+                <div class="label">
+                  <span class="label-text text-[#030712] ">What is your name*</span>
+                </div>
+                <input type="text" placeholder="Type here" class="input input-bordered w-full py-6 border-2 bg-white border-black rounded-xl" />
+              </label>
+            <label class="form-control w-full">
+                <div class="label">
+                  <span class="label-text text-[#030712] ">Email ID*</span>
+                </div>
+                <input type="email" placeholder="Type here" class="input input-bordered w-full py-6 border-2 bg-white border-black rounded-xl" />
+              </label>
+            <label class="form-control w-full">
+                <div class="label">
+                  <span class="label-text text-[#030712] ">Phone Number*</span>
+                </div>
+                <input type="number" placeholder="Type here" class="input input-bordered w-full py-6 border-2 bg-white border-black rounded-xl" />
+              </label>
+         </div>
+            <div class="flex"><button class="bg-[#1DD100] rounded-xl py-4 w-full text-white"> NEXT</button></div>
+           <div class="flex justify-around">
+            <h1 class="text-[#030712]"><a href="">Terms and Conditions</a></h1>
+            <h1 class="text-[#030712]"><a href="">Cancellation Policy</a></h1>
+           </div>
+         </div>
+         </div>
+         </div>
+
+       </div>
+    </section>
+</main>
 </body>
+
 </html>
