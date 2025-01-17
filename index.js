@@ -5,31 +5,24 @@ function hiddenElementById(id){
 const hiddenElement = document.getElementById(id);
 hiddenElement.classList.add('hidden')
 }
-function removeHiddenElementById(id){
+function showElementById(id){
 const hiddenElement = document.getElementById(id);
 hiddenElement.classList.remove('hidden')
 }
+function getInputValueId(id){
+  const inputElement = document.getElementById(id);
+  let inputElementValue = inputElement.value;
+  const SplitInputElementValue= inputElementValue.split(' ')
+  const joinInputElementValue  = SplitInputElementValue.join('');
+  const values =  joinInputElementValue.toUpperCase();
+  return values;
+}
 
-// const header = document.getElementById('header')
 
-// const webBody = document.getElementById('web-body')
 
-// const footer = document.getElementById('footer')
+const seatElement = document.getElementById('seat-element') // buss seat element
 
-// const successfulSection = document.getElementById('successful-section')
-
-// const nextBtn = document.getElementById('next-btn')
-// nextBtn.addEventListener('click',
-//   function(){
-//    successfulSection.classList.remove('hidden')
-//    header.classList.add('hidden')
-//    webBody.classList.add('hidden')
-//    footer.classList.add('hidden')
-//   })
-
-const seatElement = document.getElementById('seat-element')
-
-const buyTicketBtn = document.getElementById('buy-ticket-btn')
+const buyTicketBtn = document.getElementById('buy-ticket-btn') // buy ticket button and scroll add
 buyTicketBtn.addEventListener('click',
   function(){
 seatElement.scrollIntoView({behavior:'instant'})
@@ -41,7 +34,7 @@ function setInnerText(id,value){
   const element = document.getElementById(id)
   element.innerText = value
 }
-const seatListBox = document.getElementById('seat-list-box')
+  const seatListBox = document.getElementById('seat-list-box') // added seat number and class box
 
   const allSeat = document.getElementsByClassName('seat')
   for(let seat of allSeat){
@@ -49,8 +42,8 @@ const seatListBox = document.getElementById('seat-list-box')
       event.target.style.backgroundColor = 'green';
       event.target.style.pointerEvents = 'none'; //disabled after select seat
       count++;
-      setInnerText('seat-count',count);
-      setInnerText('seat-left',(parseInt(document.getElementById('seat-left').innerText)-1))
+      setInnerText('seat-count',count); //set innerText in seat count
+      setInnerText('seat-left',(parseInt(document.getElementById('seat-left').innerText)-1)) // remain set add left seat on left sect count section
       const seatName = event.target.innerText;
       // create a new text
       const listBox = document.createElement('div')
@@ -78,20 +71,16 @@ const seatListBox = document.getElementById('seat-list-box')
         document.getElementById('seat-element').style.pointerEvents = 'none'; // disabled all seat 
         couponBtn.classList.remove('disabled') //enable coupon button
         couponBtn.addEventListener('click',function(){
-          const couponElement = document.getElementById('coupon');
-          let couponValue = couponElement.value;
-          const SplitElementValue = couponValue.split(' ')
-          const JoinCouponValue = SplitElementValue.join('');
-          const coupon = JoinCouponValue.toUpperCase();
+          getInputValueId('coupon') // coupon input
+
           // coupon validation
-          if(coupon === 'NEW15'){
-            setInnerText('grand-total',parseInt(parseInt(p3.innerText) *count)-(parseInt(p3.innerText) *count)*0.15);
-            setInnerText('discount',(parseInt(p3.innerText) *count)*0.15);
-            const discountedSection = document.getElementById('discounted-section');
-            discountedSection.classList.remove('hidden')
-            const couponInputSection= document.getElementById('coupon-input-section');
-            couponInputSection.classList.add('hidden')
-          }else if(coupon === 'COUPLE20'){
+          if( getInputValueId('coupon') === 'NEW15'){
+              setInnerText('grand-total',parseInt(parseInt(p3.innerText) *count)-(parseInt(p3.innerText) *count)*0.15); // set discounted grand total
+              setInnerText('discount',(parseInt(p3.innerText) *count)*0.15);
+              showElementById('discounted-section') //  show discount section
+              hiddenElementById('coupon-input-section') // hidden coupon input section
+           
+          }else if( getInputValueId('coupon') === 'COUPLE20'){
             setInnerText('grand-total',parseInt(parseInt(p3.innerText) *count)-(parseInt(p3.innerText) *count)*0.20);
             setInnerText('discount',(parseInt(p3.innerText) *count)*0.20);
             const discountedSection = document.getElementById('discounted-section');
@@ -101,14 +90,14 @@ const seatListBox = document.getElementById('seat-list-box')
           }else{
             alert('input right coupon code')
           }
+          const couponElement = document.getElementById('coupon');
           couponElement.value ='';
         })
       }
      
       //  set grand total
-      setInnerText('grand-total',parseInt(parseInt(p3.innerText) *count));
-      // const SplitElementValue = elementValue.split(' ')
-      // const joinElementValue = SplitElementValue.join('')
+      setInnerText('grand-total',parseInt(parseInt(p3.innerText) *count)); // set grand total whiteout discount
+    //  validation next button
       if( count == 1){
         const nextBtn = document.getElementById('next-btn')
         nextBtn.classList.remove('disabled')
@@ -117,16 +106,17 @@ const seatListBox = document.getElementById('seat-list-box')
           hiddenElementById('header')
           hiddenElementById('web-body')
           hiddenElementById('footer')
-          removeHiddenElementById('successful-section')
+          showElementById('successful-section')
         })
       }
+      // add continue button
       const continueBtn = document.getElementById('continue-btn')
      continueBtn.addEventListener('click',
      function(){
-          removeHiddenElementById('header')
-          removeHiddenElementById('web-body')
-          removeHiddenElementById('footer')
-        hiddenElementById('successful-section')
+          showElementById('header')
+          showElementById('web-body') // show main section
+          showElementById('footer')
+          hiddenElementById('successful-section')
         location.reload(true)
 
 })
