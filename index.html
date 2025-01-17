@@ -18,7 +18,7 @@
 </head>
 <body class="raleway">
   <!-- header section -->
-  <header class="hidden">
+  <header id="header" class="">
     <nav>
      <div class="navbar bg-white">
          <div class="navbar-start">
@@ -65,7 +65,7 @@
     </nav>
  </header>
 <main>
-<section class="hidden">
+<section id="web-body" class="">
     <!-- banner section -->
     <section>
       <div class="flex flex-col justify-center lg:relative">
@@ -82,7 +82,7 @@
                   <p class="w-96">
                     Relaxing Journey Bus Services is more than just a means of transportation; it's an experience designed to rejuvenate and delight. Choose us for your next trip and discover the joy of traveling in true comfort.
                   </p>
-                  <button class="bg-[#1DD100] text-[#030712] font-bold border-none p-5 rounded-xl">Buy Ticket</button>
+                  <button id="buy-ticket-btn" class="bg-[#1DD100] text-[#030712] font-bold border-none p-5 rounded-xl">Buy Ticket</button>
           </div>     
        </div>
       </div>
@@ -190,7 +190,7 @@
                   </div>
                   <div class="flex items-center pl-4 pr-4 text-green-600 gap-2 bg-[#1dd10026] rounded-xl">
                     <img src="images/seat-gray.png" alt="">
-                    <h1><span>40</span> Seats left</h1>
+                    <h1><span id="seat-left">40</span> Seats left</h1>
                   </div>
                 </div>
             
@@ -236,81 +236,82 @@
                      <hr class="divide-dotted">
                   </div>
               </div>
-              <div class="flex-1  grid grid-cols-5 gap-2 items-center p-4">
+              <!-- seat select part -->
+              <div id="seat-element" class="flex-1  grid grid-cols-5 gap-2 items-center p-4">
                   <!-- Driver's seat -->
                   <div></div> <!-- Empty cell for alignment -->
                  <div></div>
                   <div></div> <!-- Empty cell for spacing -->
                   <div></div>
                   <div class="w-12 h-12 bg-gray-200 flex items-center justify-center rounded-full">
-                      <img src="tabler-icon-steering-wheel.png" alt="Driver Seat" class="w-6 h-6">
+                      <img src="images/" alt="Driver Seat" class="w-6 h-6">
                     </div>
                 
                   <!-- Row A -->
                   <div class="font-bold text-center">A</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A1</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A2</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A3</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A4</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A1</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A2</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A3</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">A4</div>
                 
                   <!-- Row B -->
                   <div class="font-bold text-center">B</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B1</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B2</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B3</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B4</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B1</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B2</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B3</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">B4</div>
                 
                   <!-- Row C -->
                   <div class="font-bold text-center">C</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C1</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C2</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C3</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C4</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C1</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C2</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C3</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">C4</div>
                 
                   <!-- Row D -->
                   <div class="font-bold text-center">D</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D1</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D2</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D3</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D4</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D1</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D2</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D3</div>
+                  <div class="seat  w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">D4</div>
                 
                   <!-- Row E -->
                   <div class="font-bold text-center">E</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E1</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E2</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E3</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E4</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E1</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E2</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E3</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">E4</div>
                 
                   <!-- Row F -->
                   <div class="font-bold text-center">F</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F1</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F2</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F3</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F4</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F1</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F2</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F3</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">F4</div>
                   <!-- Row G -->
                   <div class="font-bold text-center">G</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G1</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G2</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G3</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G4</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G1</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G2</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G3</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">G4</div>
                   <!-- Row H -->
                   <div class="font-bold text-center">H</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H1</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H2</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H3</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H4</div>
+                  <div class=" seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H1</div>
+                  <div class=" seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H2</div>
+                  <div class=" seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H3</div>
+                  <div class=" seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">H4</div>
                   <!-- Row I -->
                   <div class="font-bold text-center">I</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I1</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I2</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I3</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I4</div>
+                  <div class=" seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I1</div>
+                  <div class=" seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I2</div>
+                  <div class=" seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I3</div>
+                  <div class=" seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">I4</div>
                   <!-- Row J -->
                   <div class="font-bold text-center">J</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J1</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J2</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J3</div>
-                  <div class="w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J4</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J1</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J2</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J3</div>
+                  <div class="seat w-12 h-12 bg-gray-200 text-center flex items-center justify-center font-bold rounded-lg">J4</div>
                 </div>
              </div>
              <!-- seat booking info -->
@@ -322,33 +323,40 @@
             <div class="gap-4 bg-[#F7F8F8] p-5 rounded-2xl mt-7">
                
                 <div class="flex justify-between gap-7">
-                    <h1 class="inline-flex items-center gap-2 text-[#030712]">seat <span class="w-7 h-5 bg-green-300 text-center rounded-xl">0</span></h1>
+                    <h1 class="inline-flex items-center gap-2 text-[#030712]">seat <span id="seat-count" class="w-7 h-5 bg-green-300 text-center rounded-xl">0</span></h1>
                     <h1 class="text-[#030712] ">class</h1>
                     <h1 class="text-[#030712] ">price</h1>
                 </div>
                 <hr class="divide-dotted">
                 <!-- input child price,class  -->
-                <div class="flex justify-between">
+                <div id="seat-list-box" class="flex flex-col gap-2">
                     
                 </div>
                 <hr class="divide-dotted">
                 <!-- total price  -->
                 <div class="flex justify-between">
                     <h1 class="text-[#030712] "> Total</h1>
-                    <h1 class="text-[#030712] ">BDT <span class="total-price">0</span></h1>
+                    <h1 class="text-[#030712] ">BDT <span id="total-price">0</span></h1>
                 </div>
-                <div>
-                    <h1 class="inline-flex rounded-lg p-5 border-green-400 bg-white"><input type="text" placeholder="Have any copnu?" class="bg-white">
-                    <button class="bg-green-400 text-white text-center rounded-xl p-2">Apply</button></h1>
+                <!-- coupon input section -->
+                <div id="coupon-input-section">
+                    <h1 class="inline-flex rounded-lg p-5 border-green-400 bg-white">
+                      <input type="text"  placeholder="Have any copnu?" id="coupon" class="bg-white outline-none">
+                    <button id="coupun-btn" class="bg-green-400 text-white text-center rounded-xl p-2 disabled">Apply</button>
+                  </h1>
                     
+                </div>
+                <!-- discounted price -->
+                <div id="discounted-section" class="hidden">
+                  <h1 class="text-4xl font-semibold text-black">Discounted price: <span id="discount"></span></h1>
                 </div>
                 <!-- grand total -->
                 <div class="flex justify-between">
                     <h1 class="text-[#030712] "> Grand Total</h1>
-                    <h1 class="text-[#030712] ">BDT <span class="grand-total">0</span></h1>
+                    <h1 class="text-[#030712] ">BDT <span id="grand-total">0</span></h1>
                 </div>
             </div>
-               <!-- div 2.1 -->
+               <!-- Identity section -->
            <div class="flex flex-col gap-3 ">
            <div>
               <label class="form-control w-full">
@@ -367,15 +375,16 @@
                   <div class="label">
                     <span class="label-text text-[#030712] ">Phone Number*</span>
                   </div>
-                  <input type="number" placeholder="Type here" class="input input-bordered w-full py-6 border-2 bg-white border-black rounded-xl" />
+                  <input type="number" id="phone-number-input" placeholder="Type here" class="input input-bordered w-full py-6 border-2 bg-white border-black rounded-xl" />
                 </label>
            </div>
-              <div class="flex"><button class="bg-[#1DD100] rounded-xl py-4 w-full text-white"> NEXT</button></div>
+              <div class="flex"><button id="next-btn" class="bg-[#1DD100] rounded-xl py-4 w-full text-white disabled"> NEXT</button></div>
              <div class="flex justify-around">
               <h1 class="text-[#030712]"><a href="">Terms and Conditions</a></h1>
               <h1 class="text-[#030712]"><a href="">Cancellation Policy</a></h1>
              </div>
            </div>
+
            </div>
            </div>
   
@@ -383,7 +392,7 @@
       </section>
 </section>
      <!-- conform section -->
-     <section id="successful-section" class="bg-[#F2F1F1] flex items-center justify-center py-20">
+     <section id="successful-section" class=" hidden bg-[#F2F1F1] flex items-center justify-center py-20">
       <div class="flex flex-col gap-7 items-center bg-white py-11">
         <img src="images/success.png" alt="">
         <h1 class="text-green-500 font-bold text-4xl">successful</h1>
@@ -395,7 +404,7 @@
     </section>
 </main>
 <!-- Footer section -->
-<footer class="hidden">
+<footer id="footer" class="">
   <section class="bg-[#030712] text-white">
     <div class=" flex flex-col gap-7 pt-8">
 
