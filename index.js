@@ -1,24 +1,16 @@
 
-
-
-
-// const nextBtn = document.getElementById('next-btn')
-// nextBtn.addEventListener('click',
-//   function(){
-//     phoneNumber();
-//     console.log('remove hidden')
-//      return
-//   }
-// )
-
+// function for hidden element
 function hiddenElementById(id){
 const hiddenElement = document.getElementById(id);
 hiddenElement.classList.add('hidden')
 }
+// function for show element
 function showElementById(id){
 const hiddenElement = document.getElementById(id);
 hiddenElement.classList.remove('hidden')
 }
+
+// function for get input value
 function getInputValueId(id){
   const inputElement = document.getElementById(id);
   let inputElementValue = inputElement.value;
@@ -27,6 +19,8 @@ function getInputValueId(id){
   let values =  joinInputElementValue.toUpperCase();
   return values;
 }
+
+// continue button 
 const continueBtn = document.getElementById('continue-btn');
 continueBtn.addEventListener('click',
 function(){
@@ -37,29 +31,6 @@ function(){
 }
 )
 
-// function phoneNumber() {
-//   const phoneNumberElement = document.getElementById('phone-number-input');
-//   const phoneNumberValue = phoneNumberElement.value.trim(); // Ensure no leading/trailing spaces
-//   const count2 = phoneNumberValue.length; // Count the number of characters in the cleaned input
-
-//   console.log("Input length:", count2);
-
-//   if (isNaN(parseInt(phoneNumberValue)) || phoneNumberValue === "") {
-//     alert("Must input a valid phone number"); // Alert for invalid or empty input
-//     console.log("Input a valid number"); 
-//     return
-//   } else if (count2 > 1) {
-//     // Show success section when input is valid and length > 1
-//     showElementById("successful-section");
-//     hiddenElementById("web-body");
-//     hiddenElementById("header");
-//   } else {
-//     // Alert No-2 when input length <= 1
-//     alert("Must input a valid phone number (Alert No-2)");
-//   }
-  
-// }
-
 const seatElement = document.getElementById('seat-element') // buss seat element
 
 const buyTicketBtn = document.getElementById('buy-ticket-btn') // buy ticket button and scroll add
@@ -69,7 +40,7 @@ seatElement.scrollIntoView({behavior:'instant'})
   })
   // count
   let count = 0;
-
+// function set innerText
 function setInnerText(id,value){
   const element = document.getElementById(id)
   element.innerText = value
@@ -79,7 +50,7 @@ function setInnerText(id,value){
   const allSeat = document.getElementsByClassName('seat')
   for(let seat of allSeat){
     seat.addEventListener('click',function(event){
-      event.target.style.backgroundColor = 'green';
+      event.target.style.backgroundColor = '#1DD100';
       event.target.style.pointerEvents = 'none'; //disabled after select seat
       count++;
       setInnerText('seat-count',count); //set innerText in seat count
@@ -100,15 +71,16 @@ function setInnerText(id,value){
        listBox.appendChild(p1)
        listBox.appendChild(p2)
        listBox.appendChild(p3)
-      //  seat list box
+      //  set list box
        seatListBox.appendChild(listBox)
-      //  seat total price
+      //  set total price
        setInnerText('total-price',parseInt(parseInt(p3.innerText) *count));
 
       //  apply coupon code 
       const couponBtn = document.getElementById('coupun-btn')
       if(count === 4){
         document.getElementById('seat-element').style.pointerEvents = 'none'; // disabled all seat 
+        couponBtn.style.background = '#1DD100'
         couponBtn.classList.remove('disabled') //enable coupon button
         couponBtn.addEventListener('click',function(){
           getInputValueId('coupon') // coupon input
@@ -120,7 +92,7 @@ function setInnerText(id,value){
               showElementById('discounted-section') //  show discount section
               hiddenElementById('coupon-input-section') // hidden coupon input section
            
-          }else if( getInputValueId('coupon') === 'COUPLE20'){
+          }else if( getInputValueId('coupon') === 'COUPLE20'){ // couple coupon section 
             setInnerText('grand-total',parseInt(parseInt(p3.innerText) *count)-(parseInt(p3.innerText) *count)*0.20);
             setInnerText('discount',(parseInt(p3.innerText) *count)*0.20);
             const discountedSection = document.getElementById('discounted-section');
@@ -137,47 +109,40 @@ function setInnerText(id,value){
      
       //  set grand total
       setInnerText('grand-total',parseInt(parseInt(p3.innerText) *count)); // set grand total whiteout discount
-      // input phone number
-      
-      
+     
     //  validation next button
-    // const phoneNumberElement = document.getElementById('phone-number-input')
     const nextBtn = document.getElementById('next-btn')
       if(count >= 1){
+        nextBtn.style.background = '#1DD100'
         nextBtn.classList.remove('disabled')
       }
-
-      // add continue button
-
     })
   }
+  // add next button 
   const nextBtn = document.getElementById('next-btn')
   nextBtn.addEventListener('click',
     function(){
       phoneNumber();
-      console.log('remove hidden')
     }
   )
 
-
+// phone number validation and show and hidden section
   function phoneNumber() {
-    // phoneNumberElement.addEventListener('input', function () {});
     const phoneNumberElement = document.getElementById('phone-number-input');
+        phoneNumberElement.addEventListener('input', function () {});// input dynamically
         const phoneNumberValue = parseInt(phoneNumberElement.value)
-        
         let count2 = getInputValueId('phone-number-input').length
-        console.log( count2)
+        // console.log( count2)
         if (isNaN(phoneNumberValue)) {
-          alert('must input phone number')
-        console.log('Input a valid number');
+        alert('must input phone number')
       }else if( count2 >= 5){
-       showElementById('successful-section')
+       showElementById('successful-section') //show successful section 
        hiddenElementById('web-body')
        hiddenElementById('header')
        hiddenElementById('footer')
       }else{
         alert('must input  5 digit') //alert no-2
       }
-    // Validate input dynamically
+    
   }
   
