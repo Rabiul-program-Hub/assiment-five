@@ -1,6 +1,16 @@
 
 
 
+
+// const nextBtn = document.getElementById('next-btn')
+// nextBtn.addEventListener('click',
+//   function(){
+//     phoneNumber();
+//     console.log('remove hidden')
+//      return
+//   }
+// )
+
 function hiddenElementById(id){
 const hiddenElement = document.getElementById(id);
 hiddenElement.classList.add('hidden')
@@ -12,13 +22,43 @@ hiddenElement.classList.remove('hidden')
 function getInputValueId(id){
   const inputElement = document.getElementById(id);
   let inputElementValue = inputElement.value;
-  const SplitInputElementValue= inputElementValue.split(' ')
-  const joinInputElementValue  = SplitInputElementValue.join('');
-  const values =  joinInputElementValue.toUpperCase();
+  let SplitInputElementValue= inputElementValue.split(' ')
+  let joinInputElementValue  = SplitInputElementValue.join('');
+  let values =  joinInputElementValue.toUpperCase();
   return values;
 }
+const continueBtn = document.getElementById('continue-btn');
+continueBtn.addEventListener('click',
+function(){
+  hiddenElementById('successful-section')
+  showElementById('header')
+  showElementById('web-body')
+  location.reload(true)
+}
+)
 
+// function phoneNumber() {
+//   const phoneNumberElement = document.getElementById('phone-number-input');
+//   const phoneNumberValue = phoneNumberElement.value.trim(); // Ensure no leading/trailing spaces
+//   const count2 = phoneNumberValue.length; // Count the number of characters in the cleaned input
 
+//   console.log("Input length:", count2);
+
+//   if (isNaN(parseInt(phoneNumberValue)) || phoneNumberValue === "") {
+//     alert("Must input a valid phone number"); // Alert for invalid or empty input
+//     console.log("Input a valid number"); 
+//     return
+//   } else if (count2 > 1) {
+//     // Show success section when input is valid and length > 1
+//     showElementById("successful-section");
+//     hiddenElementById("web-body");
+//     hiddenElementById("header");
+//   } else {
+//     // Alert No-2 when input length <= 1
+//     alert("Must input a valid phone number (Alert No-2)");
+//   }
+  
+// }
 
 const seatElement = document.getElementById('seat-element') // buss seat element
 
@@ -67,7 +107,7 @@ function setInnerText(id,value){
 
       //  apply coupon code 
       const couponBtn = document.getElementById('coupun-btn')
-      if(count == 4){
+      if(count === 4){
         document.getElementById('seat-element').style.pointerEvents = 'none'; // disabled all seat 
         couponBtn.classList.remove('disabled') //enable coupon button
         couponBtn.addEventListener('click',function(){
@@ -97,28 +137,47 @@ function setInnerText(id,value){
      
       //  set grand total
       setInnerText('grand-total',parseInt(parseInt(p3.innerText) *count)); // set grand total whiteout discount
+      // input phone number
+      
+      
     //  validation next button
-      if( count == 1){
-        const nextBtn = document.getElementById('next-btn')
+    // const phoneNumberElement = document.getElementById('phone-number-input')
+    const nextBtn = document.getElementById('next-btn')
+      if(count >= 1){
         nextBtn.classList.remove('disabled')
-      nextBtn.addEventListener('click',
-        function(){
-          hiddenElementById('header')
-          hiddenElementById('web-body')
-          hiddenElementById('footer')
-          showElementById('successful-section')
-        })
       }
-      // add continue button
-      const continueBtn = document.getElementById('continue-btn')
-     continueBtn.addEventListener('click',
-     function(){
-          showElementById('header')
-          showElementById('web-body') // show main section
-          showElementById('footer')
-          hiddenElementById('successful-section')
-        location.reload(true)
 
-})
+      // add continue button
+
     })
   }
+  const nextBtn = document.getElementById('next-btn')
+  nextBtn.addEventListener('click',
+    function(){
+      phoneNumber();
+      console.log('remove hidden')
+    }
+  )
+
+
+  function phoneNumber() {
+    // phoneNumberElement.addEventListener('input', function () {});
+    const phoneNumberElement = document.getElementById('phone-number-input');
+        const phoneNumberValue = parseInt(phoneNumberElement.value)
+        
+        let count2 = getInputValueId('phone-number-input').length
+        console.log( count2)
+        if (isNaN(phoneNumberValue)) {
+          alert('must input phone number')
+        console.log('Input a valid number');
+      }else if( count2 >= 5){
+       showElementById('successful-section')
+       hiddenElementById('web-body')
+       hiddenElementById('header')
+       hiddenElementById('footer')
+      }else{
+        alert('must input  5 digit') //alert no-2
+      }
+    // Validate input dynamically
+  }
+  
